@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Totally Click This</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="brand">TOTALLY CLICK THIS</div>
+
+    <div class="stats">
+      <span id="wrongCount">Wrong clicks: 0</span>
+      <span id="chaosLevel">Chaos: 0%</span>
+    </div>
+  </div>
+
+  <main id="gameArea">
+
+    <section class="intro" id="intro">
+
+      <div class="introCard">
+
+        <div class="warningIcon">🔘</div>
+
+        <p class="tinyText">MAXY.FUN PRESENTS</p>
+
+        <h1>TOTALLY<br />CLICK THIS</h1>
+
+        <p class="subtitle">
+          Nothing bad will happen.
+          Probably.
+        </p>
+
+        <button id="startButton" class="bigButton">
+          START
+        </button>
+
+      </div>
+
+    </section>
+
+    <section class="gameScreen hidden" id="gameScreen">
+
+      <div class="instruction">
+        <p>Find the correct button.</p>
+        <span>One of them definitely works.</span>
+      </div>
+
+      <div id="buttonZone"></div>
+
+      <div class="chaosBarWrap">
+        <div class="chaosBar">
+          <div id="chaosBarFill"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="winScreen hidden" id="winScreen">
+
+      <div class="winCard">
+
+        <div class="winEmoji">🎉</div>
+
+        <p class="tinyText">SOMEHOW</p>
+
+        <h2>YOU WON</h2>
+
+        <p id="winText">
+          You found the correct button.
+        </p>
+
+        <button id="playAgainButton" class="bigButton">
+          PLAY AGAIN
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="fakePopup" class="fakePopup hidden">
+    <div class="fakePopupCard">
+      <h2 id="fakePopupTitle">YOU WIN!</h2>
+      <p id="fakePopupText">Definitely real.</p>
+      <button id="fakePopupButton">OKAY</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
