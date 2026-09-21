@@ -587,10 +587,41 @@ function randomItem(array) {
   ];
 }
 
-// TEST MODE
-document.addEventListener("keydown", event => {
-  if (event.key.toLowerCase() === "t" && correctButton) {
-    correctButton.style.outline = "6px solid lime";
-    correctButton.style.boxShadow = "0 0 30px lime";
+// TEST MODE - press T to reveal the real button
+document.addEventListener("keydown", function(event) {
+  if (event.code === "KeyT") {
+
+    console.log("TEST MODE PRESSED");
+
+    if (!correctButton) {
+      alert("No correct button exists yet. Press START first.");
+      return;
+    }
+
+    correctButton.style.setProperty(
+      "outline",
+      "8px solid lime",
+      "important"
+    );
+
+    correctButton.style.setProperty(
+      "box-shadow",
+      "0 0 40px lime",
+      "important"
+    );
+
+    correctButton.style.setProperty(
+      "background",
+      "lime",
+      "important"
+    );
+
+    correctButton.style.setProperty(
+      "color",
+      "black",
+      "important"
+    );
+
+    correctButton.textContent = "✅ REAL BUTTON";
   }
 });
