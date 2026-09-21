@@ -586,3 +586,10 @@ function randomItem(array) {
     )
   ];
 }
+
+document.addEventListener("keydown", event => {
+  if (event.key.toLowerCase() === "t" && correctButton) {
+    correctButton.style.outline = "6px solid lime";
+    correctButton.style.boxShadow = "0 0 30px lime";
+  }
+});
