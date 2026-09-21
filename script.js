@@ -587,6 +587,7 @@ function randomItem(array) {
   ];
 }
 
+// TEST MODE
 document.addEventListener("keydown", event => {
   if (event.key.toLowerCase() === "t" && correctButton) {
     correctButton.style.outline = "6px solid lime";
